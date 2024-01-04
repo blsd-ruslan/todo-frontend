@@ -1,3 +1,43 @@
 .initials-container, .lists-container {
     border: 1px solid gray;
 }
+
+.initials-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-sidebar-container {
+    display: grid;
+    grid-template: 1fr 10fr / 100%;
+}
+.settings-button-container {
+    padding: 5px 10px 0 30px;
+}
+
+.settings-button {
+    width: 20px;
+    height: 20px;
+}
+
+.initials {
+    flex: 1;
+    text-align: start;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.sidebar-option {
+    height: 40px;
+    transition: all 0.5s;
+}
+
+.sidebar-option:hover {
+    background-color: #e8e7e6;
+}
+
+
+.lists-title {
+    font-size: 20px;
+    font-weight: 900;
+}

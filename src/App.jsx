@@ -1,12 +1,14 @@
 import './App.css'
-import Greeting from './mainComponents/Greeting'
 import MainSidebar from './mainComponents/MainSidebar'
+import AllTasks from './mainComponents/AllTasks'
+import DayRoute from './mainComponents/DayRoute'
 
 function App() {
   return (
     <div className='page-container'>
       <MainSidebar/>
-      <Greeting/>
+      <DayRoute/>
+      <AllTasks/>
     </div>
   )
 }
