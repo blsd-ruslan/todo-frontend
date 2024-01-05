@@ -1,0 +1,24 @@
+.date-day {
+    font-size: 47px;
+    font-weight: 900;
+}
+
+.date-weekday {
+    color: #9B9DB5;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.date-month {
+    color: #D9D8D8;
+    font-weight: 700;
+}
+.date-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-container > * {
+    line-height: normal;
+    white-space: nowrap;
+}

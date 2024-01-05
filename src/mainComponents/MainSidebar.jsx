@@ -1,20 +1,26 @@
 import './MainSidebar.css';
 import settingsIcon from '../assets/settings.svg';
+import { useState, useEffect } from 'react';
 
 function MainSidebar() {
+    const [sidebarOptions, setSidebarOptions] = useState([]);
+
     const imageClicked = () => {
-        alert("Image clicked!");
-    }
-    // console.log(document.getElementsByClassName('view-container')[0].children);
-    const viewContainer = Array.from(document.getElementsByClassName('view-container')[0].children)
-         ,lists = Array.from(document.getElementsByClassName('lists')[0].children)
-         ,sidebarOptions = Array.from(new Set(viewContainer.concat(lists)));
-    sidebarOptions.map((element) => {
+      alert('Image clicked!');
+    };
+  
+    useEffect(() => {
+      const viewContainer = Array.from(document.querySelector('.view-container')?.children || []);
+      const lists = Array.from(document.querySelector('.lists')?.children || []);
+      const combinedOptions = Array.from(new Set(viewContainer.concat(lists)));
+      setSidebarOptions(combinedOptions);
+    }, []);
+  
+    useEffect(() => {
+      sidebarOptions.forEach((element) => {
         element.classList.add('sidebar-option');
-        return element;
-    })
-    console.log(sidebarOptions);
-    // sidebarOptions.forEach((element) => element.classList.add('sidebar-option'));
+      });
+    }, [sidebarOptions]);
 
     return (
         <div className="main-sidebar-container">
@@ -30,18 +36,15 @@ function MainSidebar() {
                 <div>My day</div>
                 <div>Next 7 days</div>
                 <div>All my tasks</div>
-                <div>Create view</div>
+                <div> <span>+</span> Create view</div>
             </div>
             <div className='lists-container'>
-                <div className='lists-title sidebar-option'>My lists <span>+</span></div>
+                <div className='lists-title sidebar-option'>My lists <span>+</span> </div>
                 <div className='lists'>
                     <div>Personal</div>
                     <div>Work</div>
                     <div>Hobbies</div>
                     <div>To Buy</div>
-                </div>
-                <div>
-
                 </div>
             </div>
 
