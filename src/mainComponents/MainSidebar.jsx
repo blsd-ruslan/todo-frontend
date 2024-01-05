@@ -5,8 +5,15 @@ function MainSidebar() {
     const imageClicked = () => {
         alert("Image clicked!");
     }
-    console.log(document.getElementsByClassName('view-container').children);
-    // const sidebarOptions = Array.from(document.getElementsByClassName('view-container').children).map;
+    // console.log(document.getElementsByClassName('view-container')[0].children);
+    const viewContainer = Array.from(document.getElementsByClassName('view-container')[0].children)
+         ,lists = Array.from(document.getElementsByClassName('lists')[0].children)
+         ,sidebarOptions = Array.from(new Set(viewContainer.concat(lists)));
+    sidebarOptions.map((element) => {
+        element.classList.add('sidebar-option');
+        return element;
+    })
+    console.log(sidebarOptions);
     // sidebarOptions.forEach((element) => element.classList.add('sidebar-option'));
 
     return (
@@ -28,10 +35,10 @@ function MainSidebar() {
             <div className='lists-container'>
                 <div className='lists-title sidebar-option'>My lists <span>+</span></div>
                 <div className='lists'>
-                    <div className='sidebar-option'>Personal</div>
-                    <div className='sidebar-option'>Work</div>
-                    <div className='sidebar-option'>Hobbies</div>
-                    <div className='sidebar-option'>To Buy</div>
+                    <div>Personal</div>
+                    <div>Work</div>
+                    <div>Hobbies</div>
+                    <div>To Buy</div>
                 </div>
                 <div>
 
