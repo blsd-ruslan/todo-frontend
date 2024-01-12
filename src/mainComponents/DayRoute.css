@@ -1,0 +1,5 @@
+.day-route {
+    display: grid;
+    grid-template-rows: 5% 5% 1fr 5%;
+    justify-items: center;
+}

@@ -1,0 +1,22 @@
+.add-task-panel-container {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 80%;
+    padding: 12px 24px 12px 18px;
+}
+
+.add-task-field {
+    font-size: 14px;
+    width: 200px;
+    height: 35px;
+}
+
+input::placeholder {
+    font-weight: 500;
+    color: #D9D8D8;
+}
+
+.hidden-element {
+    display: none;
+}
