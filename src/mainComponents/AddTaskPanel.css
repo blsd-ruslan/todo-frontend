@@ -40,7 +40,7 @@ input::placeholder {
 .active-panel {
     width: 100%;
     display: grid;
-    grid-template-columns: 5% 1fr 10%;
+    grid-template-columns: 5% 1fr 9%;
 }
 
 .active-panel > * {

@@ -19,7 +19,7 @@ function AddTaskPanel() {
                 <div style={{display: 'flex', justifyContent: 'flex-start'}}>Add task</div>
             </div>
             <div className='active-panel hidden-element'>
-                <MenuIcon style={{marginTop: '14px'}}/>
+                <MenuIcon style={{marginTop: '14px', paddingLeft: '4px'}}/>
                 <textarea></textarea>
                 <button style={null}>
                     <ArrowUpwardIcon/>
