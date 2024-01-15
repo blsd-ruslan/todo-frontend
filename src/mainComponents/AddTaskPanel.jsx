@@ -1,18 +1,29 @@
 import './AddTaskPanel.css';
 import AddIcon from '@mui/icons-material/Add';
+import MenuIcon from '@mui/icons-material/Menu';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 function AddTaskPanel() {
-    // TODO: switch states of hidden between these 2 nested containers
-    return (
-        <div className="add-task-panel-container">
-            <div style={{color: '#D9D8D8'}}>
-                <AddIcon />
-                Add task
-            </div>
-            <div className='hidden-element'>
-                <textarea rows='1'>
+    const handleFocusChange = () => {
+        const passivePanel = document.getElementsByClassName('passive-panel')[0];
+        const activePanel = document.getElementsByClassName('active-panel')[0];
 
-                </textarea>
+        passivePanel.classList.toggle('hidden-element');
+        activePanel.classList.toggle('hidden-element');
+    }
+
+    return (
+        <div style={{color: '#D9D8D8'}} className="add-task-panel-container" onFocus={handleFocusChange} onBlur={handleFocusChange} tabIndex='1'>
+            <div className='passive-panel' >
+                <AddIcon style={{marginTop: '2px'}}/>
+                <div style={{display: 'flex', justifyContent: 'flex-start'}}>Add task</div>
+            </div>
+            <div className='active-panel hidden-element'>
+                <MenuIcon style={{marginTop: '14px'}}/>
+                <textarea></textarea>
+                <button style={null}>
+                    <ArrowUpwardIcon/>
+                </button>
             </div>
         </div>
     )
