@@ -1,0 +1,11 @@
+.current-tasks-container {
+    display: grid;
+    gap: 13px;
+    padding: 18px;
+}
+
+.current-task {
+    display: grid;
+    cursor: pointer;
+    grid-template-areas: ;
+}
