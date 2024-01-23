@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './CurrentTasks.css';
+import CheckBoxTask from '../secondaryComponents/CheckBoxTask';
 
 function CurrentTasks() {
 
@@ -13,7 +14,12 @@ function CurrentTasks() {
     return (
         <div className='current-tasks-container'>
             <div className='current-task'>
-                Test
+                <div>
+                    <CheckBoxTask/>
+                </div>
+                <div>
+                    
+                </div>
             </div>
             <div className='current-task'>
                 Test 2

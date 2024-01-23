@@ -3,6 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
   --brand-color: #0083ff;
+  --inactive-color: #d9d8d8;
+  --secondary-color: #9b9b9b;
+  --gutter: 16px;
+  --border-radius: 8px;
+  --myday-box-shadow: 0 1px 4px rgba(0,0,0,.02),0 2px 18px rgba(0,0,0,.05);
+  --pane-box-shadow: 0 1px 4px rgba(0,0,0,.04),0 2px 18px rgba(0,0,0,.08);
+  --add-panel-border-radius: 6px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;

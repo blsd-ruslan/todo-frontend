@@ -1,8 +1,8 @@
 .add-task-panel-container {
     position: relative;
-    border-radius: 10px;
+    border-radius: var(--add-panel-border-radius);
     border: 1px solid transparent;
-    box-shadow: 0 1px 4px rgba(0,0,0,.04),0 2px 18px rgba(0,0,0,.08);
+    box-shadow: var(--pane-box-shadow);
     font-size: 20px;
     text-align: center;
     width: 60%;
@@ -30,7 +30,7 @@ input.add-task-field {
 
 input::placeholder {
     font-weight: 500;
-    color: #D9D8D8;
+    color: var(--inactive-color);
 }
 
 .passive-panel {
@@ -60,7 +60,7 @@ input::placeholder {
     resize: none; /*remove the resize handle on the bottom right*/
 
     background-color: transparent;
-    color: #D9D8D8;
+    color: var(--inactive-color);
 }
 
 .hidden-element {
